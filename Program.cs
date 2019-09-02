@@ -14,20 +14,26 @@ namespace Conditional_Statement_Deliverable2
     {
         static void Main(string[] args)
         {
+            // Vars needed for program
             String exit = "Y";
             string input = "";
             decimal expGrade = 0;
             string finalGrade = "";
 
+            // Try Catch statment to catch any errors
             try
             {
+                // While statement to control is the user wants to input another grade
                 while (exit == "Yes" || exit == "yes" || exit == "y" || exit == "Y")
                 {
+                    // Asks for user input
                     Console.Write("What grade do you expect to get for ISM 4300?: ");
                     input = Console.ReadLine();
 
-                     expGrade = decimal.Parse(input);
+                    // Phrse the input string into a decimal
+                    expGrade = decimal.Parse(input);
 
+                    // Nested While loop that checks if the user inputed a number between 0 to 100. If not, asks the user to input a new grade.
                     while (expGrade < 0 && expGrade > 100)
                     {
                         Console.WriteLine("\nPlease input a grade less than 100 and greater than 0");
@@ -37,7 +43,8 @@ namespace Conditional_Statement_Deliverable2
                         expGrade = decimal.Parse(input);
                     }
 
-                    if(expGrade <= 100 && expGrade >= 98)
+                    // If loop that takes user input and gives a grade based on the syllabus
+                    if (expGrade <= 100 && expGrade >= 98)
                     {
                         finalGrade = "A+";
                     }
@@ -89,6 +96,8 @@ namespace Conditional_Statement_Deliverable2
                     {
                         finalGrade = "F";
                     }
+
+                    // Output that shows your grade.
                     Console.WriteLine("\nYour grade is: " + finalGrade);
 
                     // Reads input for the user to restart the while loop. (Restarting the program)
@@ -97,6 +106,7 @@ namespace Conditional_Statement_Deliverable2
                 }
 
             }
+            // catch if there is an eror
             catch
             {
                 Console.WriteLine("Error");
