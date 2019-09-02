@@ -106,7 +106,7 @@ namespace Conditional_Statement_Deliverable2
                 }
 
             }
-            // catch if there is an eror
+            // catch if there is an error.
             catch
             {
                 Console.WriteLine("Error");
