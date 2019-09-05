@@ -34,7 +34,7 @@ namespace Conditional_Statement_Deliverable2
                     expGrade = decimal.Parse(input);
 
                     // Nested While loop that checks if the user inputed a number between 0 to 100. If not, asks the user to input a new grade.
-                    while (expGrade < 0 && expGrade > 100)
+                    while (expGrade < 0 || expGrade > 100)
                     {
                         Console.WriteLine("\nPlease input a grade less than 100 and greater than 0");
                         Console.Write("What grade do you expect to get for ISM 4300?: ");
@@ -109,7 +109,7 @@ namespace Conditional_Statement_Deliverable2
             // catch if there is an error.
             catch
             {
-                Console.WriteLine("Error");
+                Console.WriteLine("\nError, please enter a number between 0 and 100.");
             }
         }
     }
